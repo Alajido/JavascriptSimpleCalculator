@@ -1,4 +1,5 @@
 const passwords = document.querySelectorAll('.password-box');
+console.log(passwords)
 const btn = document.querySelector('#btn');
 
 function generatePassword(){
