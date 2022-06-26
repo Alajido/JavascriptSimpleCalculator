@@ -1,4 +1,4 @@
-/ variable that stores earlyAge
+// variable that stores earlyAge
 var earlyYears = 2;
 
 earlyYears *= 10.5;
@@ -17,3 +17,9 @@ myName = "abubakar".toLowerCase();
 console.log(
   `My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} old in dog years.`
 );
+
+let read = true;
+if(read){
+    console.log('let start reading')
+}
+document.write('hello')
