@@ -49,3 +49,22 @@ function FindingMax(arr){
 const answ2 = FindingMax(list)
 console.log(answ2)
 
+
+
+const counter = 0;
+const btn = document.getElementById('btn');
+setTimeout(count, 3000)
+const btn2 = document.getElementById('btn2');
+
+// btn.addEventListener('click', () => {
+//     console.log(counter++)
+// })
+
+function count(){
+    console.log(counter++)
+}
+const flash = setTimeout( () => {
+    console.log('hell')
+}, 4000)
+
+// btn2.addEventListener('click', clearInterval(flash))
