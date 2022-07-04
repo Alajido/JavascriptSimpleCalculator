@@ -8,10 +8,16 @@
 </head>
 <body>
     <h1>racing</h1>
+   
     <script>
+
+        // variable that hold the random race number
         let raceNumber = Math.floor(Math.random() * 1000);
+        // check if the user has registered
         let isRegistered = true;
+        // variable for the runner age
         let runnerAge = 20;
+        // flow that check
         if (runnerAge >= 18 && isRegistered == false){
         runnerAge += 1000;
         };
@@ -24,7 +30,9 @@
         }else {
         console.log(`see registeration desk`)
         }
-
     </script>
+     
+
+    
 </body>
 </html>
