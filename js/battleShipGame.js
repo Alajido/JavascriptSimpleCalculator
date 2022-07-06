@@ -1,56 +1,38 @@
-// const locations = [2, 3, 4];
-var location_1 = 2;
-var location_2 = 3;
-var location_3 = 4;
+var randomLocation = Math.floor(Math.random() * 5);
+console.log(randomLocation)
+var location1 = randomLocation;
+var location2 = location1 + 1;
+var location3 = location2 + 1;
 var guess;
 var hits = 0;
-var guesses = 0;
+var numberOfGuess = 0;
 var isSunk = false;
 
-// while (isSunk == false){
-//     guess = prompt('enter a number ');
+while (!isSunk){
+  guess = parseInt(prompt('enter a number'))
 
-//     if (guess < 0 || guess > 6){
-//         alert('enter a valid number');
-//     } else{
-//         numberOfGuess = numberOfGuess + 1;
+  if (guess < 0 || guess > 6){
+    alert('enter a valid number')
+  } else{
+    numberOfGuess = numberOfGuess + 1;
 
-//         if (guess == location_1 || guess == location_2 || guess == location_3){
-//             alert('hit');
-//             hit = hit + 1;
+    if (guess == location1 || guess == location2 || guess == location3){
+      hits = hits + 1;
+      alert('hit')
+      
 
-//             if (hit == 3){
-//                 isSunk == true;
-//                 alert('sunked')
-//             }
-//         } else{
-//             alert('miss')
-//         }
-//     }
-// }
+      if (hits == 3){
+        isSunk = true;
+        alert('sunked')
+      }
 
-
-while (isSunk == false) {
-    guess = prompt("Ready, aim, fire! (enter a number from 0-6):");
-    if (guess < 0 || guess > 6) {
-    alert("Please enter a valid cell number!");
-    } else {
-    guesses = guesses + 1;
-    if (guess == location1 || guess == location2 || guess == location3) {
-    alert("HIT!");
-    hits = hits + 1;
-    if (hits == 3) {
-    isSunk = true;
-    alert("You sank my battleship!");
+    } else{
+      alert('miss')
     }
-    } else {
-    alert("MISS");
-    }
-    }
-    }
-    var stats = "You took " + guesses + " guesses to sink the battleship, " +
-    "which means your shooting accuracy was " + (3/guesses);
-    alert(stats);
+  }
+}
+var scores = ('you took ' + numberOfGuess + ' guesses to sunk at ' + 3/numberOfGuess)
+alert('your score is ' + scores)
 
 
 /*
@@ -95,17 +77,15 @@ const recordCollection = {
 function updateRecords(records, id, prop, value) {
   if (prop !== 'tracks' && value !== ''){
     records[id][prop] = value;
-  } else if (prop === 'tracks' && records[id].hasOwnProperty('tracks') === false){
-    records[id][prop] = [value];
+  } else if (prop === 'tracks' && records[id].hasOwnProperty('tracks')=== false){
+    records[id][prop] = [value]
   } else if (prop === 'tracks' && value !== ''){
     records[id][prop].push(value)
   } else if (value === ''){
-    delete records[id][prop]
-  } else {
-      return records;
-  }
+    delete records[id][prop];
+  } 
+  return records;
 }
 
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
-
 */
