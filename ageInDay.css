@@ -23,7 +23,7 @@ h1 {
     justify-content: space-around;
     padding: 10px;
 }
-#click, #generate{
+#clickMe, #generate{
     padding: 10px;
     color: white;
     background-color: rgb(96, 202, 96);
